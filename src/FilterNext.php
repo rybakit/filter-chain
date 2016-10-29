@@ -1,6 +1,6 @@
 <?php
 
-namespace Phive\FilterChain;
+namespace FilterChain;
 
 trait FilterNext
 {
@@ -14,12 +14,12 @@ trait FilterNext
         $this->next = $next;
     }
 
-    protected function next($message)
+    protected function next($data)
     {
         if ($this->next) {
-            $message = $this->next->process($message);
+            $data = $this->next->process($data);
         }
 
-        return $message;
+        return $data;
     }
 }

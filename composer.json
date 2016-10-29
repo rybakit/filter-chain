@@ -1,5 +1,5 @@
 {
-    "name": "phive/filter-chain",
+    "name": "rybakit/filter-chain",
     "description": "A library that implements intercepting filter pattern",
     "type": "library",
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Phive\\FilterChain\\": "src/"
+            "FilterChain\\": "src/"
         }
     },
     "minimum-stability": "dev"

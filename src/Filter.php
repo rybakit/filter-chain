@@ -1,6 +1,6 @@
 <?php
 
-namespace Phive\FilterChain;
+namespace FilterChain;
 
 interface Filter
 {
@@ -10,9 +10,9 @@ interface Filter
     public function setNext(Filter $next);
 
     /**
-     * @param mixed $message
+     * @param mixed $data
      *
      * @return mixed
      */
-    public function process($message);
+    public function process($data);
 }

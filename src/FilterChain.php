@@ -1,6 +1,6 @@
 <?php
 
-namespace Phive\FilterChain;
+namespace FilterChain;
 
 class FilterChain implements Filter
 {
@@ -27,10 +27,10 @@ class FilterChain implements Filter
         $this->filters[] = $filter;
     }
 
-    public function process($message)
+    public function process($data)
     {
         if (isset($this->filters[0])) {
-            return $this->filters[0]->process($message);
+            return $this->filters[0]->process($data);
         }
 
         throw new \LogicException('No filters were added.');
